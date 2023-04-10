@@ -79,3 +79,5 @@ gem "devise-tailwindcssed", "~> 0.1.5"
 gem "devise", "~> 4.9"
 
 gem "hotwire-livereload", "~> 1.2", :group => :development
+
+gem "pg", "~> 1.4"
