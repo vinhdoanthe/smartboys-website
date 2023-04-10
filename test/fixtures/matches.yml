@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_home: false
+  competitor_name: MyString
+  start_at: 2023-04-10 18:42:10
+  stadium_name: MyString
+  stadium_location: MyString
+  outfit_color: MyString
+
+two:
+  is_home: false
+  competitor_name: MyString
+  start_at: 2023-04-10 18:42:10
+  stadium_name: MyString
+  stadium_location: MyString
+  outfit_color: MyString

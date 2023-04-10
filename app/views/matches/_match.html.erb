@@ -1,0 +1,42 @@
+<div id="<%= dom_id match %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Is home:</strong>
+    <%= match.is_home %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Competitor name:</strong>
+    <%= match.competitor_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Competitor logo:</strong>
+    <%= link_to match.competitor_logo.filename, match.competitor_logo if match.competitor_logo.attached? %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Start at:</strong>
+    <%= match.start_at %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Stadium name:</strong>
+    <%= match.stadium_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Stadium location:</strong>
+    <%= match.stadium_location %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Outfit color:</strong>
+    <%= match.outfit_color %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this match", match, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this match', edit_match_path(match), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

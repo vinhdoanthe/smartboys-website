@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smartboyswebsite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="bg-gray-900 text-white">
+      <nav class="flex justify-between items-center py-4 px-6">
+        <a href="#" class="font-bold text-lg">Logo</a>
+        <ul class="flex">
+          <li><a href="#" class="px-4 hover:text-gray-500">Link 1</a></li>
+          <li><a href="#" class="px-4 hover:text-gray-500">Link 2</a></li>
+          <li><a href="#" class="px-4 hover:text-gray-500">Link 3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+    <footer class="bg-gray-900 text-white py-4 px-6">
+      <p class="text-sm">&copy; 2023 Landing Page</p>
+    </footer>
+  </body>
+</html>
