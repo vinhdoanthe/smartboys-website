@@ -81,3 +81,5 @@ gem "devise", "~> 4.9"
 gem "hotwire-livereload", "~> 1.2", :group => :development
 
 gem "pg", "~> 1.4"
+
+gem "view_component", "~> 2.82"

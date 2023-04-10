@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_match, only: %i[ show edit update destroy ]
 
   # GET /matches or /matches.json
@@ -9,6 +9,7 @@ class MatchesController < ApplicationController
 
   # GET /matches/1 or /matches/1.json
   def show
+    render(MatchComponent.new(match: @match))
   end
 
   # GET /matches/new
