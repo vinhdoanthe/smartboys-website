@@ -1,1 +1,15 @@
-<div>Add MatchCard template here</div>
+<a href="<%= match_path(@match) %>">
+  <div class="bg-white shadow rounded-lg overflow-hidden">
+    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/800x500" alt="Match image">
+    <div class="p-4">
+      <h3 class="text-gray-800 font-semibold mb-2"><%= @match.opponent_name %></h3>
+      <p class="text-gray-600 mb-4"><%= @match.stadium_name %></p>
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9 17a.98.98 0 01-.707-.293l-6-6a.999.999 0 111.414-1.414L9 14.586l8.293-8.293a.999.999 0 111.414 1.414l-9 9A.98.98 0 019 17z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-green-500"><%= display_match_time(@match) %></span>
+      </div>
+    </div>
+  </div>
+</a>

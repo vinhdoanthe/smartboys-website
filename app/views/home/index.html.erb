@@ -5,44 +5,32 @@
     <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Get Started</a>
   </div>
 </section>
-<section class="bg-white py-10">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Upcoming Matches</h2>
-    <!-- Add your events here -->
-    <div class="flex flex-wrap -mx-4">
-      <div class="w-full lg:w-1/3 px-4 mb-8">
-        <div class="bg-gray-100 shadow-md rounded-md overflow-hidden">
-          <img src="event-image.jpg" alt="Event Image" class="w-full">
-          <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Event Name</h3>
-            <p class="text-gray-600 mb-2">Date and Time</p>
-            <p class="text-gray-600 mb-4">Location</p>
-            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Learn More</a>
-          </div>
-        </div>
+<section class="bg-gray-100 py-12">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Upcoming Matches</h2>
+    <% if upcoming_matches.blank? %>
+      <p class="text-gray-600">No upcoming matches</p>
+    <% else %>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <%= render(MatchCardComponent.with_collection(upcoming_matches)) %>
       </div>
-      <!-- Add more event cards here -->
-    </div>
-
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Past Matches</h2>
-    <!-- Add your events here -->
-    <div class="flex flex-wrap -mx-4">
-      <div class="w-full lg:w-1/3 px-4 mb-8">
-        <div class="bg-gray-100 shadow-md rounded-md overflow-hidden">
-          <img src="event-image.jpg" alt="Event Image" class="w-full">
-          <div class="p-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Event Name</h3>
-            <p class="text-gray-600 mb-2">Date and Time</p>
-            <p class="text-gray-600 mb-4">Location</p>
-            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more event cards here -->
-    </div>
-
+    <% end %>
   </div>
 </section>
+
+<section class="bg-gray-300 py-12">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Past Matches</h2>
+    <% if past_matches.blank? %>
+      <p class="text-gray-600">No past matches</p>
+    <% else %>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <%= render(MatchCardComponent.with_collection(past_matches)) %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
 <section class="bg-gray-100 py-10">
   <div class="max-w-4xl mx-auto px-4">
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Sponsors</h2>
