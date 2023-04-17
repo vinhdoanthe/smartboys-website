@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_15_073737) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_15_091457) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -63,6 +63,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_15_073737) do
     t.string "team_goal_scorers"
     t.string "opponent_goal_scorers"
     t.integer "created_by"
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.boolean "is_active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

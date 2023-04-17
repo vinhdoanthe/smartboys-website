@@ -86,3 +86,5 @@ gem "view_component", "~> 2.82"
 gem "avo"
 
 gem "rspec-rails", "~> 6.0", :groups => [:development, :test]
+
+gem "faker", "~> 3.2", :groups => [:development, :test]
